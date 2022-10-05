@@ -26,3 +26,12 @@ while(i<10):
     if i==5:
         break
     i+=1
+    
+    
+# Use break statement inside in the loop
+for val in 'string':
+    if val == 'i'
+        break
+    print(val)
+    
+    

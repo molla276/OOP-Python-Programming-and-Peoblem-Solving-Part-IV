@@ -34,4 +34,22 @@ for val in 'string':
         break
     print(val)
     
+   
+# Password
+password = ''
+
+while password != 'password':
+    print('What is the password?')
+    password = input()
     
+ print('Yes password is ' + password + '. You may enter.')
+
+
+
+
+
+
+
+
+
+

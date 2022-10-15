@@ -7,7 +7,7 @@ import requests
 import time
 
 def weather_data():
-    pi_address = 'https://api.openweathermap.org/data/2.5/weather?q=Dhaka&exclude=30&appid="collect api id from openweathermap"&units=metric'
+    pi_address = 'https://api.openweathermap.org/data/2.5/weather?q=Dhaka&exclude=30&appid="collect apiid from openweathermap"&units=metric'
     url = pi_address
     json_data = requests.get(url).json()
     print(json_data)

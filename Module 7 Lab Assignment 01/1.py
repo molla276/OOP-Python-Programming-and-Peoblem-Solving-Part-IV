@@ -1,8 +1,6 @@
-""" 1. Create a string out of some words given in a list -
-
+""" 
+1. Create a string out of some words given in a list -
 l = ["This", "is", "very", "fantastic"]
-
-
 Expected Output:
 "This is very fantastic"
 

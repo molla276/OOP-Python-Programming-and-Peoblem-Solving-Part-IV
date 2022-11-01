@@ -1,37 +1,48 @@
-from queue import Empty
-
-#part1
 class Star_Cinema:
     hall_list = []
 
-    def entry_hall(self):
-        self.hall_list.append()
-#part2
+    def entry_hall(self,hall_details):
+        self.hall_list.append(hall_details) #insert from hall class
+
 class Hall(Star_Cinema):
-    def __init__ (self,rows, cols, hall_no):
+    def __init__(self, rows, cols, hall_no):
+        self.seats = {}
+        self.show_list = []
         self.rows = rows
         self.cols = cols
         self.hall_no = hall_no
-        self.seats = []
-        self.show_list = ()
-#part3
+        self.entry_hall(vars(self))
+
+    def seat_list(self):
+        my_list = []
+
+        for i in range(self.rows):
+            my_list.append([])
+
+        for seat in my_list:
+            for i in range(self.cols):
+                seat.append(0)
+        return my_list
+
     def entry_show(self, id, movie_name, time):
         # self.id = id
-        # self.movie_name = movie_name
+        # self. movie_name = movie_name
         # self.time = time
-        self.show_list.append([id,movie_name,time])
-        seat = [['Empty']*self.rows*self.cols]
-        self.seats[id] = seat
-#part4
-    def book_sets(self,customer_name, phone_number, id, least_of_tuples):
-        self.customer_name = customer_name
-        self.phone_number = phone_number
-        self.least_of_tuples = []
+        # show = (id, movie_name, time)
+        # self.show_list.append(show)
+        # self.seats = {id: [[0 for i in range(self.cols)] for j in range(self.rows)]}
 
-#part5
+        show = (id, movie_name, time)
+        self.show_list.append(show)
+        self.seats[id] = self.seat_list()
+
+    def book_seats(self,customer_name, phone_number, id,list_of_tuples):
+        for i, j in self.seats.items():
+            
+
     def view_show_list(self):
-        pass
+        for show in self.show_list:
+            print(f'movie_name: {show[1]}\t Show ID: {show[0]}\t Time: {show[2]}')
 
-#part6
-    def view_available_sets(self):
+    def view_available_seats(self):
         pass

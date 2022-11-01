@@ -38,11 +38,31 @@ class Hall(Star_Cinema):
 
     def book_seats(self,customer_name, phone_number, id,list_of_tuples):
         for i, j in self.seats.items():
-            
+            if id == i:
+                for k, l in enumerate(j):
+                    for m, n in enumerate(list_of_tuples):
+                        if j[n[0]][n[1]] != False:
+                            print('Already seats are booked')
+                            break
+                        else:
+                            j[n[0]][n[1]] = customer_name
+                    break
+                break
 
     def view_show_list(self):
-        for show in self.show_list:
-            print(f'movie_name: {show[1]}\t Show ID: {show[0]}\t Time: {show[2]}')
+        return self.show_list
 
-    def view_available_seats(self):
-        pass
+    def view_available_seats(self, id):
+        for show in self.show_list:
+            if id in show:
+                available_seats = self.seats[]
+                print(available_seats)
+
+                for seat in available_seats:
+                    for i in seat:
+                        if i == False:
+                            return i
+                        else:
+                            print('Already seats are booked')
+
+

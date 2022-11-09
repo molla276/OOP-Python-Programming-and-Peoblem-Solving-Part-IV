@@ -2,5 +2,7 @@ saarc = ['Bangladesh', 'Pakistan', 'Butan', 'Nepal', 'Maldive', 'Afganistan', 'I
 country = input('Enter your country name: '}
 
 if country in saarc:
-   print(country,'is a name of saarc')
+   print(country,'is a member of saarc')
+else:
+   print(country,'is not a member of saarc')
 print('Programme tarminated')

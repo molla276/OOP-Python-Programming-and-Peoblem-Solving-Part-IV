@@ -7,11 +7,11 @@
 
 # 2. Add the three inputs and display the sum
 
-# num1 = int(input())
-# num2 = int(input())
-# # num3 = int(input())
-# sum = num1 * num2 
-# print(sum)
+num1 = int(input())
+num2 = int(input())
+num3 = int(input())
+sum = num1 * num2 
+print(sum)
 
 a=input("Number 1\n")
 

@@ -1,0 +1,4 @@
+A = 5
+B = 9
+ans = 5 & 9
+print(ans)
